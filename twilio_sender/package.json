@@ -1,0 +1,33 @@
+{
+  "name": "twilio_sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/app.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [],
+  "author": "yurii.osadchyi@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@dfinity/agent": "^0.9.1",
+    "@dfinity/auth-client": "^0.9.1",
+    "@dfinity/authentication": "^0.9.1",
+    "@dfinity/candid": "^0.9.1",
+    "@dfinity/identity": "^0.9.1",
+    "@dfinity/principal": "^0.9.1",
+    "concurrently": "^6.2.0",
+    "cron": "^1.8.2",
+    "dotenv": "^10.0.0",
+    "node-fetch": "latest",
+    "nodemon": "^2.0.12",
+    "twilio": "^3.65.0"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.3",
+    "@types/node-fetch": "^2.5.11",
+    "typescript": "^4.3.5"
+  }
+}

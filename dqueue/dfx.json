@@ -1,0 +1,40 @@
+{
+  "canisters": {
+    "dqueue": {
+      "main": "src/dqueue/main.mo",
+      "type": "motoko"
+    },
+    "dqueue_assets": {
+      "dependencies": [
+        "dqueue"
+      ],
+      "frontend": {
+        "entrypoint": "src/dqueue_assets/src/index.html"
+      },
+      "source": [
+        "src/dqueue_assets/assets",
+        "dist/dqueue_assets/"
+      ],
+      "type": "assets"
+    },
+    "icp_sms": {
+      "build": "cargo build --target wasm32-unknown-unknown --package icp_sms --release",
+      "candid": "src/icp_sms/src/icp_sms.did",
+      "wasm": "target/wasm32-unknown-unknown/release/icp_sms.wasm",
+      "type": "custom"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.7.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

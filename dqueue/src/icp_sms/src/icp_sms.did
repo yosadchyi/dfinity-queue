@@ -1,0 +1,9 @@
+type DispatchResult = variant {
+    Ok: bool;
+    Error: text;
+}
+
+service : {
+    "subscribe": (callback: text) -> (bool);
+    "dispatch": (phoneNumber: text, message: text) -> (DispatchResult);
+}
